@@ -12,7 +12,7 @@ class CharacterController extends GetxController
     idCharacters.value = id;
   }
 
-  dynamic getDetail(id) => services
+  dynamic getCharacters(id) => services
           .fetchCharacter(id)
           .then((response) => {change(response, status: RxStatus.success())},
               onError: (err) {
@@ -29,7 +29,7 @@ class CharacterController extends GetxController
   void onReady() {
     super.onReady();
     if (idCharacters != 0) {
-      getDetail(idCharacters.toString());
+      getCharacters(idCharacters.toString());
     }
   }
 

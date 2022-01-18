@@ -33,7 +33,7 @@ class ApiProvider extends GetConnect {
   }
 
   Future<DetailModel> fetchDetail(String id) async {
-    final response = await fetch("/kuraimas/$id");
+    final response = await fetch("/anime/$id");
 
     if (response.status.hasError) {
       print(response.statusText);
@@ -45,7 +45,7 @@ class ApiProvider extends GetConnect {
   }
 
   Future<CharactersModel> fetchCharacter(String id) async {
-    final response = await fetch("/kuraimas/$id/characters_staff");
+    final response = await fetch("/anime/$id/characters_staff");
 
     if (response.status.hasError) {
       print(response.statusText);

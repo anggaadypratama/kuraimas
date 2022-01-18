@@ -166,7 +166,7 @@ class DetailAppBar extends SliverPersistentHeaderDelegate {
   double get maxExtent => 400;
 
   @override
-  double get minExtent => 106;
+  double get minExtent => GetPlatform.isAndroid ? 88 : 106;
 
   @override
   bool shouldRebuild(covariant SliverPersistentHeaderDelegate oldDelegate) =>
